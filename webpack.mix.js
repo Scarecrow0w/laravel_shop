@@ -16,3 +16,9 @@ mix.postCss('resources/css/app.css', 'public/css', [
     require('tailwindcss'),
     require('autoprefixer'),
 ]);
+
+mix.browserSync({
+    proxy: 'http://localhost',
+    notify: false
+});
+
