@@ -20,10 +20,10 @@
     </head>
 
     <body class="text-black bg-gray-100">
-        <header class="sticky top-0 mx-auto max-w-6xl px-8 py-6 flex justify-between items-center bg-white border-b-2 border-gray-100">
+        <header class="sticky top-0 flex items-center justify-between max-w-6xl px-8 py-6 mx-auto bg-white border-b-2 border-gray-100">
             <a href="/" class="flex items-center">
                 <x-logo class="w-8 h-8 mr-4"/>
-                <span class="font-display font-black uppercase text-xl tracking-wider">Laravel Shop</span>
+                <span class="text-xl font-black tracking-wider uppercase font-display">Laravel Shop</span>
             </a>
             <nav>
                 <ul class="flex space-x-6">
@@ -47,16 +47,16 @@
             </nav>
         </header>
 
-        <main class="mx-auto max-w-6xl px-8 py-16 bg-white">
+        <main class="max-w-6xl px-8 py-16 mx-auto bg-white">
             @isset($breadcrumb)
                 {{ $breadcrumb }}
             @else
-                <h1 class="mb-12 font-display text-4xl">{{ $title ?? '' }}</h1>
+                <h1 class="mb-12 text-4xl font-display">{{ $title ?? '' }}</h1>
             @endisset
             {{ $slot }}
         </main>
 
-        <footer class="mx-auto max-w-6xl px-8 py-16 text-sm text-center text-gray-500">
+        <footer class="max-w-6xl px-8 py-16 mx-auto text-sm text-center text-gray-500">
             Laravel Shop
         </footer>
     </body>

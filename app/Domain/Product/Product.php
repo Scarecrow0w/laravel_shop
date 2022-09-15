@@ -16,8 +16,6 @@ class Product extends Model
 
     protected $casts = [
         'manages_inventory' => 'boolean',
-        'city_ids' => 'array',
-        'product_category_ids' => 'array',
     ];
 
     protected static function newFactory(): ProductFactory

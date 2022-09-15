@@ -24,6 +24,7 @@
         "spatie/period": "^1.5"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.7",
         "barryvdh/laravel-ide-helper": "^2.9",
         "brianium/paratest": "^6.2",
         "facade/ignition": "^2.5",
@@ -41,7 +42,10 @@
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/package-versions-deprecated": true
+        }
     },
     "extra": {
         "laravel": {

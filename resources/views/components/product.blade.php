@@ -1,12 +1,12 @@
 <div {{ $attributes->merge(['class'=>'bg-gray-100 border-l-8 border-gray-200'])->except(['title', 'price', 'action']) }}>
-    <div class="p-4 flex items-center border border-gray-100">
-        <div class="w-16 h-16 bg-white flex items-center justify-center border border-gray-300">
+    <div class="flex items-center p-4 border border-gray-100">
+        <div class="flex items-center justify-center w-16 h-16 bg-white border border-gray-300">
             <x-logo-outline class="w-8 h-8"/>
         </div>
 
         <div class="flex-grow ml-4">
-            <h3 class="flex justify-between font-semibold text-lg">
-                <span>{{ $title ?? '' }}</span>
+            <h3 class="flex justify-between text-lg font-semibold">
+                <span>{{ $title ?? '' }} id: {{ $product }}</span>
                 @isset($amount)
                     {{ $amount }} &times;
                 @endisset
@@ -19,7 +19,7 @@
     @endphp
 
     @isset($actionUrl)
-        <div class="px-4 pb-4 flex justify-end">
+        <div class="flex justify-end px-4 pb-4">
             <a href="{{ Auth::user() ? $actionUrl : route('login') }}">
                 <x-button type="button">
                     {{ Auth::user() ? $actionLabel ?? 'Add to cart' : 'Log in' }}
